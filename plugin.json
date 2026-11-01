@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vibeskills-local",
+  "version": "4.1.3-harness2.4",
+  "description": "Local VibeSkills 4.1.1 with current installed-and-enabled plugin discovery and verified local workflow.",
+  "author": {
+    "name": "VibeSkills contributors"
+  },
+  "logo": "assets/logo.png",
+  "composerIcon": "assets/logo.png",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "VibeSkills (Local)",
+        "shortDescription": "Local Skill orchestration",
+        "longDescription": "Runs the VibeSkills 4.1.1 governed workflow with exact installed-and-enabled Codex plugin discovery, declared Skill roots, and local success/failure chain validation. Requires local Python and the Codex app-server for plugin admission.",
+        "developerName": "VibeSkills contributors",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Use vibe to organize and verify this complex local task.",
+          "Show me how to invoke vibe for my current project."
+        ]
+      }
+    }
+  }
+}

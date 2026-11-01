@@ -1,0 +1,47 @@
+{
+  "local_version": "4.1.1+harness2.4",
+  "plugin_version": "4.1.3-harness2.4",
+  "official_base": "4.1.1",
+  "base_commit": "5ce2258ecb57a9532257dcadaca571dc7fe54868",
+  "official_archive_sha256": "746b5b44a9cc7852d33eadbbe9b9b950f83f104d0d33ea4cf33876b4bba9e3b8",
+  "local_changes": {
+    "apps/vgo-cli/src/vgo_cli/commands.py": "14bebca173ea413f8e43f5a0b045033a0862330d93c972177e82468908d11713",
+    "apps/vgo-cli/src/vgo_cli/process.py": "ec3e706031fb696bf6ebf695666b637591e64f50d6a9856bdb39b9ba6b872cce",
+    "packages/runtime-core/src/vgo_runtime/canonical_entry.py": "25922de7db5ae8dc9566e0f9facdb48a08d7975a1dee7f6181d159adf92fd51f",
+    "packages/runtime-core/src/vgo_runtime/kernel/skill_index.py": "65f12bece8bd42ed297840db25399bd0dde8bfbd6c4fb3641ad868a255e0ba49",
+    "packages/runtime-core/src/vgo_runtime/kernel/codex_plugins.py": "1ecedc2b889474efcdbdb834cd66c1098043b125fd7992cd728328c9b5b0a9f8",
+    "packages/runtime-core/src/vgo_runtime/kernel/loop.py": "579de66e636737a1bbdecb3343b86f307140f9cda2e3882198a565afa9c83e5e",
+    "packages/runtime-core/src/vgo_runtime/router_contract_runtime.py": "84132430f2a49b694c95997926c396faeeb0b11277ed5931ef205dbe570e9c25",
+    "packages/runtime-core/src/vgo_runtime/skill_authority.py": "c14a1c3c215d68f95a5a7eda7842a39268458985deba831f64f80990df736eab",
+    "SKILL.md": "d054c45d176bbf9c1c939d55e440ad5e65e68bc6dba3efff7dae2e9831132003",
+    "config/runtime-script-manifest.json": "f8971ef482295ff00cec7ba842033db94dba38adedeb4e405cacc70994105226",
+    "packages/installer-core/src/vgo_installer/discoverable_wrappers.py": "4e87ce8961908d3caef38bad0251ae5dda9134c10ce103f6144ad94ee730dcb7",
+    "packages/installer-core/src/vgo_installer/simple_skill_installer.py": "c48195cb5064c8c97a205ada22d7761a8bd384959bac577edfdd7f6541db215e",
+    "scripts/runtime/resolve-managed-runtime.py": "0e4198731d7ca0ec8ff043ab0f111d801fa6b4fa029c12e349840987581ee67a",
+    "scripts/runtime/VibeRuntime.Common.ps1": "e3d4084c3df078223d46bee9ae9948379031359cf4dcc91b6294999e9e458598"
+  },
+  "experiment_kind": "local_regression_experiment",
+  "persisted_lessons": false,
+  "previous_experiment_model_calls": 0,
+  "model_usage": {
+    "candidate_agent_executions": 4,
+    "candidate_model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "external_model_api_calls": 0,
+    "token_usage": "not measured"
+  },
+  "macos_validation": {
+    "date": "2026-11-02",
+    "platform": "macOS arm64",
+    "pwsh": "7.6.9",
+    "scope": "isolated single-module L six-stage workflow regression",
+    "synthetic_approvals": true,
+    "human_approval_verified": false,
+    "production_acceptance": false,
+    "windows_runtime_verified": false,
+    "harness2_run": "3658a6606a85474c80ce39c4",
+    "harness2_input_release": "4.1.2-harness2.2",
+    "concurrent_release_preserved": "4.1.2-harness2.3",
+    "general_benchmark_gain_proven": false
+  }
+}
