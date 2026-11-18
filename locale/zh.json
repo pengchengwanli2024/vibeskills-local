@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "VibeSkills (Local)",
+    "description": "提供 vibe 技能。对复杂任务说“用 vibe”或“/vibe”：受控运行时会写出需求文档和模块计划，在这两处停下等你确认，由智能体把本地技能绑定到模块，并在收尾前验收真实的模块结果。会话文件写在项目的 outputs/runtime 和 .vibeskills 下。需要 Python 3.10+ 和 PowerShell 7（pwsh）。它在 ~/.agents/skills、~/.codex/skills 和 Codex 插件缓存中查找技能；通过 ~/.vibeskills/skill-roots.json 加入 ~/.dsh/skills。由 DSH bundle 提供的技能对它不可见。这是 Vibe-Skills 4.1.1 的独立衍生版，不是上游官方发行版。"
+  }
+}

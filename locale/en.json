@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "VibeSkills (Local)",
+    "description": "Adds the vibe skill. Say “use vibe” or “/vibe” with a complex task: the governed runtime writes a requirement document and a module plan, stops for your approval at each, lets the agent bind local Skills to modules, and accepts real module results before cleanup. It writes its session files under outputs/runtime and .vibeskills in the project. Requires Python 3.10+ and PowerShell 7 (pwsh). It discovers Skills in ~/.agents/skills, ~/.codex/skills and the Codex plugin cache; add ~/.dsh/skills through ~/.vibeskills/skill-roots.json. Skills contributed by DSH bundles are not visible to it. An independent derivative of Vibe-Skills 4.1.1, not an official release."
+  }
+}

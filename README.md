@@ -23,6 +23,28 @@ PYTHONPATH="$REPO_ROOT/apps/vgo-cli/src" "$PYTHON_BIN" -m vgo_cli.main --help
 
 Keep `REPO_ROOT`, the selected interpreter and the workspace fixed for bounded continuation. Prepending the selected interpreter directory keeps nested PowerShell Python calls consistent with the managed runtime cache tag. Obtain the actual result contract from the runtime. Requirement and plan approvals come from the user; the agent performs actual work rather than fabricating receipts. On plan approval, forward the previously frozen `agent_skill_organization` unchanged, including when the preferred approval payload contains a null organization. Selection or loading alone does not prove Skill use.
 
+
+## Use in DeepSeek Harness
+
+This repository root is also a DeepSeek Harness (DSH) bundle. In DSH choose **Plugins** > **Add plugin** and select the checkout, or have the agent call `plugin_manager` `install_bundle` with its absolute path. Nothing is built and no dependency is installed.
+
+The bundle registers the `vibe` Skill through a dependency-free provider in `dsh/`. When DSH loads the Skill it prepends the host notes in `dsh/skills.json`: the absolute Skill root, the Bash bootstrap to use, the PowerShell 7 requirement, and how Skill discovery differs. `skills/vibe/` is byte-identical to the Codex distribution, so the managed-runtime resolver's drift check still passes; the version stays **4.1.3-harness2.4** because the runtime did not change.
+
+Boundaries in DSH:
+
+- The runtime's stages are PowerShell scripts. `pwsh` must be on `PATH`; without it the Skill reports `blocked`.
+- The runtime searches `~/.agents/skills`, `~/.codex/skills` and the Codex plugin cache. Add DSH's user Skills with `~/.vibeskills/skill-roots.json`:
+
+  ```json
+  {"schema_version": 1, "extra_skill_roots": ["~/.dsh/skills"]}
+  ```
+
+  Skills that DSH bundles contribute have no directory under a searched root and are not visible to the runtime.
+- Codex app-server plugin admission is unavailable in DSH, so installed-and-enabled plugin evidence is not produced there.
+- Exercised on macOS ARM64 with Python 3.14 and PowerShell 7.7.0: a canonical launch from DSH reached the `requirement_doc` stop and produced the four launch proof files. A full requirement, plan and execution cycle under DSH was not run.
+
+`python3 -m unittest discover -s tests` checks the bundle manifest and provider.
+
 ## Run the local Skill Navigator
 
 The public tree contains reusable source only. Generate your own private inventory before opening the page. From the repository root, after the bootstrap above:

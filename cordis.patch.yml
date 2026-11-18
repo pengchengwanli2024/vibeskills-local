@@ -1,0 +1,5 @@
+# DeepSeek Harness bundle layer. Codex reads plugin.json and .codex-plugin/plugin.json instead.
+- insert:
+    # Registers skills/vibe with the DSH notes in dsh/skills.json. The runtime itself is unchanged.
+    - id: vibeskills-local-skills
+      name: dsh-vibeskills-local
