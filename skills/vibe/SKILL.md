@@ -16,6 +16,10 @@ single-command checks, or tasks better served by another explicitly requested
 skill may proceed outside `vibe` unless the user explicitly invoked this entry.
 
 Installed-copy updates use `update --skills-dir <skills-dir>` on the same managed directory.
+`check` takes the same flag: with a non-default skills root (for example Hermes
+`~/.hermes/skills/software-development`), run `bash check.sh --skills-dir <dir>`.
+Without it the probe reads the `~/.agents/skills/vibe` default and reports a missing
+receipt even though the skill is installed correctly.
 
 User instructions, including CLAUDE.md, GEMINI.md, AGENTS.md and direct workflow limits such as TDD exceptions, remain highest priority. Preserve canonical launch and proof rules within those limits.
 
